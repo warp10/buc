@@ -1,0 +1,20 @@
+
+BUC Customizer
+==============
+
+Description
+-----------
+Handy tool to customize guest session of public computers in the library of
+Fermo (Italy). 
+
+BUC Customizer is based on guest-session-prefs-lightdm by Gunnar Hjalmarsson.
+Chances are you shouldn't install this software at all unless you exactely
+know what you are doing and why this software has been create.
+
+Authors, copyright and license
+-----------------------------
+- Authors: Gunnar Hjalmarsson, Andrea Colangelo
+- Copyright (C) 2011-2012 Gunnar Hjalmarsson
+- Copyright (C) 2013 Andrea Colangelo
+- BUC Customizer is distributed under the terms of GNU GPL3, see:
+  http://www.gnu.org/licenses/gpl-3.0.txt
