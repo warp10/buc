@@ -1,0 +1,19 @@
+Source: buc
+Section: misc
+Priority: extra
+Maintainer: Andrea Colangelo <warp10@ubuntu.com>
+Build-Depends: debhelper (>= 9.0.0)
+Standards-Version: 3.9.4
+Homepage: http://www.linuxfm.org
+Vcs-Bzr: https://code.launchpad.net/~warp10/+junk/buc
+Vcs-Browser: http://bazaar.launchpad.net/~warp10/+junk/buc/files
+
+Package: buc
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Tool to customize guest session.
+ BUC Customizer is a handy tool to customize guest session of public computers
+ in the library of Fermo (Italy). 
+ .
+ Chances are you shouldn't install this software at all unless you exactely
+ know what you are doing and why this software has been created.
