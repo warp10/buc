@@ -2,7 +2,7 @@
 
 # BUC Customizer
 #
-# Copyright (C) 2012 Andrea Colangelo
+# Copyright (C) 2012-2013 Andrea Colangelo
 #
 # Authors: Andrea Colangelo <warp10@ubuntu.com>
 #
