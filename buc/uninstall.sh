@@ -23,6 +23,8 @@
 
 rm -f /usr/bin/shut.py
 
+rm -f /usr/share/icons/hicolor/scalable/apps/shut.svg
+
 rm -f /usr/lib/lightdm/guest-session-auto
 
 rm -rf /etc/guest-session \

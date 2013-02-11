@@ -36,4 +36,6 @@ cp --preserve=timestamps guest-session-auto /usr/lib/lightdm
 
 cp shut.py /usr/bin
 
+cp shut.svg /usr/share/icons/hicolor/scalable/apps
+
 chmod a+x /usr/lib/lightdm/guest-session-auto

@@ -40,7 +40,7 @@ class Shut():
 
     def load_indicator(self):
         ind = appindicator.Indicator.new("shut",
-                             "indicator-messages",  # TODO: icon
+                             "/usr/share/icons/hicolor/scalable/apps/shut.svg",
                              appindicator.IndicatorCategory.APPLICATION_STATUS)
         ind.set_status(appindicator.IndicatorStatus.ACTIVE)
 
@@ -123,8 +123,10 @@ class Shut():
         a.set_program_name("Shut")
         a.set_comments("Tool to Logout User")
         a.set_version("0.1")
-        a.set_copyright("Copyright (C) 2012 Andrea Colangelo")
+        a.set_copyright("Copyright (C) 2012-2013 Andrea Colangelo")
         a.set_license_type(Gtk.License.GPL_3_0)
+        a.set_website("http://www.linuxfm.org")
+        a.set_artists(["Marco Alici", "Copyright (C) 2013 Marco Alici", "Released under the terms of CC-BY-SA 3.0, see:", "http://creativecommons.org/licenses/by-sa/3.0/"])
         a.run()
         a.destroy()
 
