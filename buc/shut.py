@@ -29,20 +29,22 @@ from time import time, sleep
 
 class Shut():
     def __init__(self):
+        self.icon = "/usr/share/icons/hicolor/scalable/apps/shut.svg"
+
         self.start = time()
 
         self.show_notice_30()
         GLib.timeout_add_seconds(1200, self.show_notice_10)
-        GLib.timeout_add_seconds(1740, self.show_notice_1)
+        GLib.timeout_add_seconds(1740, self.show_notice_2)
         GLib.timeout_add_seconds(1800, self.show_notice_0)
 
         self.load_indicator()
 
     def load_indicator(self):
-        ind = appindicator.Indicator.new("shut",
-                             "/usr/share/icons/hicolor/scalable/apps/shut.svg",
+        self.ind = appindicator.Indicator.new("shut",
+                             self.icon,
                              appindicator.IndicatorCategory.APPLICATION_STATUS)
-        ind.set_status(appindicator.IndicatorStatus.ACTIVE)
+        self.ind.set_status(appindicator.IndicatorStatus.ACTIVE)
 
         menu = Gtk.Menu()
 
@@ -76,7 +78,7 @@ class Shut():
 
         menu.show()
 
-        ind.set_menu(menu)
+        self.ind.set_menu(menu)
 
         Gtk.main()
 
@@ -90,8 +92,10 @@ class Shut():
         self.show_notice(notice)
         return False
 
-    def show_notice_1(self):
-        notice = "Questa sessione sara' terminata automaticamente tra 1 minuto. \
+    def show_notice_2(self):
+        self.icon = "/usr/share/icons/hicolor/scalable/apps/shutr_red.svg"
+        self.ind.set_icon_full(self.icon, "shut")
+        notice = "Questa sessione sara' terminata automaticamente tra 2 minuti. \
                   Concludi il lavoro in corso e salva i tuoi documenti. "
         self.show_notice(notice)
         return False
@@ -109,7 +113,7 @@ class Shut():
         self.show_notice(notice, header="Tempo disponibile")
 
     def show_notice(self, notice, header="Avviso: chiusura sessione"):
-        icon = ""  # TODO
+        icon = self.icon
         Notify.init('Shut')
         n = Notify.Notification.new(header, "\n" + notice, icon)
         n.show()
