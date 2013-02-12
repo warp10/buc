@@ -34,7 +34,7 @@ cp --preserve=timestamps README /usr/share/doc/lightdm/guest-session-prefs-light
 
 cp --preserve=timestamps guest-session-auto /usr/lib/lightdm
 
-cp shut.py /usr/bin
+cp shut /usr/bin
 
 cp shut.svg shut_red.svg /usr/share/icons/hicolor/scalable/apps
 

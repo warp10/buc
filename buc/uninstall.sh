@@ -21,7 +21,7 @@
 # along with this program; if not, see: http://www.gnu.org/licenses/gpl-3.0.txt
 
 
-rm -f /usr/bin/shut.py
+rm -f /usr/bin/shut
 
 rm -f /usr/share/icons/hicolor/scalable/apps/shut.svg \
 /usr/share/icons/hicolor/scalable/apps/shut_red.svg

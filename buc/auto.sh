@@ -48,4 +48,4 @@ test -w /var/guest-data && text="$text"
 zenity --warning --title="$title" --text="$text" &
 
 # Automatic logout
-shut.py
+shut
