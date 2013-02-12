@@ -35,7 +35,8 @@ class Shut():
 
         self.show_notice_30()
         GLib.timeout_add_seconds(1200, self.show_notice_10)
-        GLib.timeout_add_seconds(1740, self.show_notice_2)
+        GLib.timeout_add_seconds(1680, self.show_notice_2)
+        GLib.timeout_add_seconds(1740, self.show_notice_1)
         GLib.timeout_add_seconds(1800, self.show_notice_0)
 
         self.load_indicator()
@@ -93,10 +94,14 @@ class Shut():
         return False
 
     def show_notice_2(self):
-        self.icon = "/usr/share/icons/hicolor/scalable/apps/shutr_red.svg"
+        self.icon = "/usr/share/icons/hicolor/scalable/apps/shut_red.svg"
         self.ind.set_icon_full(self.icon, "shut")
-        notice = "Questa sessione sara' terminata automaticamente tra 2 minuti. \
-                  Concludi il lavoro in corso e salva i tuoi documenti. "
+        notice = "Questa sessione sara' terminata automaticamente tra 2 minuti. Concludi il lavoro in corso e salva i tuoi documenti."
+        self.show_notice(notice)
+        return False
+
+    def show_notice_1(self):
+        notice = "Questa sessione sara' terminata automaticamente tra 1 minuto. Concludi il lavoro in corso e salva i tuoi documenti."
         self.show_notice(notice)
         return False
 
