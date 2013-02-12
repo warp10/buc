@@ -11,6 +11,10 @@ Files: shut
 Copyright: 2012-2013 Andrea Colangelo
 License: GPL-3.0+
 
+Files: shut.1
+Copyright: 2013 Andrea Colangelo
+License: GPL-3.0+
+
 Files: shut*.svg
 Copyright: 2013 Marco Alici
 License: CC-BY-SA-3.0
