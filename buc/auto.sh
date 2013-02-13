@@ -36,6 +36,16 @@ export TEXTDOMAIN=guest-session-prefs-lightdm
 alias getstr='gettext'  # prevents that xgettext gets confused
 desktop=$(getstr --domain=xdg-user-dirs 'Desktop')
 
+# Add firefox launcher to desktop
+echo "[Desktop Entry]" > $HOME/$desktop/firefox.desktop 
+echo "Version=1.0" >> $HOME/$desktop/firefox.desktop
+echo "Type=Application" >> $HOME/$desktop/firefox.desktop
+echo "Terminal=false" >> $HOME/$desktop/firefox.desktop
+echo "Icon=firefox" >> $HOME/$desktop/firefox.desktop
+echo "Name=Mozilla Firefox" >> $HOME/$desktop/firefox.desktop
+echo "Exec=firefox" >> $HOME/$desktop/firefox.desktop
+chmod a+x $HOME/$desktop/firefox.desktop
+
 # make the info dialog window become on focus
 sleep 2
 
