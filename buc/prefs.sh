@@ -79,6 +79,9 @@ chmod -R go-rwx $HOME/.mozilla
 # no Firefox prompts about remembering password
 echo 'user_pref("signon.rememberSignons", false);' >> $profiledir/user.js
 
+# set Firefox startpage
+echo 'user_pref("browser.startup.homepage", "/usr/share/buc/home.html");' >> $profiledir/user.js
+
 # make guest created files world writable in order to ensure write access
 # to files saved in /var/guest-data at next guest session and/or facilitate
 # interaction with regular users
