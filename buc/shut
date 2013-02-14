@@ -31,7 +31,7 @@ class Shut():
     def __init__(self):
         self.icon = "/usr/share/icons/hicolor/scalable/apps/shut.svg"
 
-        self.start = time()
+        self.label = "30"
 
         self.show_notice_30()
         GLib.timeout_add_seconds(1200, self.show_notice_10)
@@ -71,17 +71,20 @@ class Shut():
         menu_items.connect("activate", self.about, buf)
         menu_items.show()
 
-        #buf = "Chiudi"
-        #menu_items = Gtk.MenuItem(buf)
-        #menu.append(menu_items)
-        #menu_items.connect("activate", Gtk.main_quit, buf)
-        #menu_items.show()
-
         menu.show()
 
         self.ind.set_menu(menu)
 
+	self.change_label()
+        GLib.timeout_add_seconds(60, self.change_label)
+
         Gtk.main()
+
+    def change_label(self):
+        self.label = str(int(self.label) - 1)
+	if self.label == "-1":
+            return False
+        self.ind.set_label(self.label, "30")  
 
     def show_notice_30(self):
         notice = "Questa sessione sara' terminata automaticamente tra 30 minuti."
@@ -112,9 +115,7 @@ class Shut():
         self.logout()
 
     def remaining(self, *args):
-        elapsed_seconds = int(time() - self.start)
-        remaining_minutes = (1800 - elapsed_seconds) / 60
-        notice = "Restano " + str(remaining_minutes) + " minuti disponibili"
+        notice = "Restano " + self.label + " minuti disponibili"
         self.show_notice(notice, header="Tempo disponibile")
 
     def show_notice(self, notice, header="Avviso: chiusura sessione"):
