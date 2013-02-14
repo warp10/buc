@@ -1,5 +1,6 @@
 buc (0.2ubuntu0~ppa1) UNRELEASED; urgency=low
 
+  * prefs.sh: drop code to handle locales.
   * shut:
     + remaining time now shown next to the icon;
     + changed order of options in menu;

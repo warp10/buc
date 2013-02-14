@@ -26,24 +26,6 @@
 #
 # While the $USER variable is guest-??????, the process is owned by root.
 
-
-# set language
-language='en_US'
-if [ "$( lsb_release -rs )" = '11.10' ]; then
-    echo "export LANGUAGE=\"$language\"" >> $HOME/.profile
-    for var in LC_MESSAGES LC_CTYPE LC_COLLATE; do
-        echo "export $var=\"$language.UTF-8\"" >> $HOME/.profile
-    done
-else
-    touch $HOME/.pam_environment
-    chown $USER:$USER $HOME/.pam_environment
-    echo "LANGUAGE=$language" >> $HOME/.pam_environment
-    echo "LANG=$language.UTF-8" >> $HOME/.pam_environment
-fi
-
-# set keyboard layout
-#echo 'setxkbmap se,us' >> $HOME/.profile
-
 # function for disabling services
 disable_app() {
     if [ -f $2/$1 ]; then
@@ -81,9 +63,4 @@ echo 'user_pref("signon.rememberSignons", false);' >> $profiledir/user.js
 
 # set Firefox startpage
 echo 'user_pref("browser.startup.homepage", "/usr/share/buc/home.html");' >> $profiledir/user.js
-
-# make guest created files world writable in order to ensure write access
-# to files saved in /var/guest-data at next guest session and/or facilitate
-# interaction with regular users
-sed -i 's/^#umask.*/umask 0/' $HOME/.profile
 

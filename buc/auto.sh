@@ -26,11 +26,6 @@
 #
 # At this stage the process is owned by user guest-??????.
 
-# One guest-session-prefs-lightdm.mo file for each applicable language
-# is needed for translation of gettexted strings.
-export TEXTDOMAINDIR=/etc/guest-session
-export TEXTDOMAIN=guest-session-prefs-lightdm
-
 # An established textdomain is used to translate 'Desktop', since the
 # shortcut below requires that string to be translated.
 alias getstr='gettext'  # prevents that xgettext gets confused
