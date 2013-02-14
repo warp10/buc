@@ -51,11 +51,15 @@ sleep 2
 
 # info dialog
 title=$(gettext 'Attenzione: sessione ospite')
-text=$(gettext 'Questa è una sessione ospite. Tutti i dati saranno eliminati
+text=$(gettext "Questa è una sessione ospite. Tutti i dati saranno eliminati
 automaticamente dopo la chiusura della sessione. Se intendi preservare i tuoi
-documenti, assicurati di salvarli su una chiavetta.')
+documenti, assicurati di salvarli su una chiavetta.
+
+La sessione sarà chiusa automaticamente tra 30 minuti. Puoi monitorare il
+tempo rimanente a tua disposizione tramite l'icona nel pannello in alto a
+destra.")
 test -w /var/guest-data && text="$text"
-zenity --warning --title="$title" --text="$text" &
+zenity --warning --height=200 --title="$title" --text="$text" &
 
 # Automatic logout
 shut
