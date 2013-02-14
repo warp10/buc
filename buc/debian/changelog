@@ -1,3 +1,9 @@
+buc (0.3ubuntu0~ppa0) UNRELEASED; urgency=low
+
+  * home.html: improved, based on firefox default page.
+
+ -- Andrea Colangelo <warp10@ubuntu.com>  Thu, 14 Feb 2013 20:19:15 +0100
+
 buc (0.2ubuntu0~ppa1) precise; urgency=low
 
   * prefs.sh: drop code to handle locales.
