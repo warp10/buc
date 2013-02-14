@@ -1,3 +1,12 @@
+buc (0.2ubuntu0~ppa1) UNRELEASED; urgency=low
+
+  * shut:
+    + remaining time now shown next to the icon;
+    + changed order of options in menu;
+    + PEP8'ed
+
+ -- Andrea Colangelo <warp10@ubuntu.com>  Thu, 14 Feb 2013 12:00:17 +0100
+
 buc (0.1ubuntu0~ppa1) precise; urgency=low
 
   * Initial Release.
