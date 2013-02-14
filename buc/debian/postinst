@@ -20,7 +20,7 @@ set -e
 
 case "$1" in
     configure)
-        chmod o-x /usr/bin/gnome-terminal
+        chmod o-x /usr/bin/gnome-terminal /usr/bin/xterm /usr/bin/uxterm
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

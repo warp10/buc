@@ -6,6 +6,7 @@ buc (0.2ubuntu0~ppa1) UNRELEASED; urgency=low
     + changed order of options in menu;
     + PEP8'ed.
   * auto.sh: info dialog improved.
+  * debian/post{inst,rm}: disable xterm and uxterm too.
 
  -- Andrea Colangelo <warp10@ubuntu.com>  Thu, 14 Feb 2013 12:00:17 +0100
 
