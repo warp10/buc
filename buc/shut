@@ -49,16 +49,16 @@ class Shut():
 
         menu = Gtk.Menu()
 
-        buf = "Termina sessione"
-        menu_items = Gtk.MenuItem(buf)
-        menu.append(menu_items)
-        menu_items.connect("activate", self.logout, buf)
-        menu_items.show()
-
         buf = "Minuti disponibili"
         menu_items = Gtk.MenuItem(buf)
         menu.append(menu_items)
         menu_items.connect("activate", self.remaining, buf)
+        menu_items.show()
+
+        buf = "Termina sessione"
+        menu_items = Gtk.MenuItem(buf)
+        menu.append(menu_items)
+        menu_items.connect("activate", self.logout, buf)
         menu_items.show()
 
         menu_items = Gtk.SeparatorMenuItem()
