@@ -1,6 +1,7 @@
-buc (0.3ubuntu0~ppa0) UNRELEASED; urgency=low
+buc (1.0ubuntu0~ppa0) precise; urgency=low
 
   * home.html: improved, based on firefox default page.
+  * images/*: added accordingly.
 
  -- Andrea Colangelo <warp10@ubuntu.com>  Thu, 14 Feb 2013 20:19:15 +0100
 
