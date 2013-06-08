@@ -21,11 +21,61 @@
 
 from gi.repository import AppIndicator3 as appindicator
 from gi.repository import Gtk
+from gi.repository import Gdk
 from gi.repository import GLib
 from gi.repository import Notify
 from os import system
 from time import time, sleep
+import hashlib
 
+class Auth_Screen():
+    def __init__(self):
+        self.auth_screen = Gtk.Window()
+        self.auth_screen.set_title("Kill me if you can, n00b!")
+        self.auth_screen.fullscreen()
+        self.auth_screen.set_keep_above(True)
+        #self.auth_screen.set_type_hint(Gdk.WindowTypeHint.SPLASHSCREEN)
+
+        self.main_box = Gtk.VBox(expand="False", spacing=50)
+        self.main_box.set_valign(Gtk.Align.CENTER)
+        self.auth_screen.add(self.main_box)
+
+        self.label = Gtk.Label()
+	self.label.set_markup("<span font_desc=\"20.0\">Chiedere all'operatore di abilitare la sessione per continuare.</span>");
+        self.main_box.pack_start(self.label, False, False, 0)
+
+        self.entry_hbox = Gtk.HBox(expand="False", spacing=100)
+        self.entry_hbox.set_halign(Gtk.Align.CENTER)
+        self.main_box.pack_start(self.entry_hbox, False, False, 0)
+
+        self.entry = Gtk.Entry()
+        self.entry.set_visibility(False)
+	self.entry.connect("activate", self.auth)
+        self.entry_hbox.pack_start(self.entry, False, True, 0)
+
+        self.but_hbox = Gtk.HBox(expand="False", spacing=100)
+        self.but_hbox.set_halign(Gtk.Align.CENTER)
+        self.main_box.pack_start(self.but_hbox, False, False, 0)
+
+        self.cancelbutton = Gtk.Button(label="Logout")
+        self.cancelbutton.connect("clicked", logout)
+        self.but_hbox.pack_start(self.cancelbutton, False, False, 0)
+        
+        self.okbutton = Gtk.Button(label="Entra")
+        self.okbutton.connect("clicked", self.auth)
+        self.but_hbox.pack_start(self.okbutton, False, False, 0)
+
+        self.auth_screen.show_all()
+        Gtk.main()
+
+    def auth(self, *args):
+        hash = hashlib.sha256()
+        hash.update(self.entry.get_text())
+        if hash.hexdigest() == 'b1a8ba0d470fcfd0326964bc1ed4e80753d55e2db296a01dcab4b9fc8cc52b68':
+            self.auth_screen.destroy()
+            Gtk.main_quit()
+        else:
+            self.entry.set_text("")
 
 class Shut():
     def __init__(self):
@@ -58,7 +108,7 @@ class Shut():
         buf = "Termina sessione"
         menu_items = Gtk.MenuItem(buf)
         menu.append(menu_items)
-        menu_items.connect("activate", self.logout, buf)
+        menu_items.connect("activate", logout, buf)
         menu_items.show()
 
         menu_items = Gtk.SeparatorMenuItem()
@@ -112,7 +162,7 @@ class Shut():
         notice = "Chiusura della sessione in corso!"
         self.show_notice(notice)
         sleep(5)
-        self.logout()
+        logout()
 
     def remaining(self, *args):
         notice = "Restano " + self.label + " minuti disponibili"
@@ -124,15 +174,11 @@ class Shut():
         n = Notify.Notification.new(header, "\n" + notice, icon)
         n.show()
 
-    def logout(self, *args):
-        cmd = "dbus-send --session --type=method_call --dest=org.gnome.SessionManager /org/gnome/SessionManager org.gnome.SessionManager.Logout uint32:1"
-        system(cmd)
-
     def about(self, *args):
         a = Gtk.AboutDialog()
         a.set_program_name("Shut")
-        a.set_comments("Tool to Logout User")
-        a.set_version("0.1")
+        a.set_comments("Tool to Authorize and Logout Users")
+        a.set_version("0.2")
         a.set_copyright("Copyright (C) 2012-2013 Andrea Colangelo")
         a.set_license_type(Gtk.License.GPL_3_0)
         a.set_website("http://www.linuxfm.org")
@@ -142,5 +188,10 @@ class Shut():
         a.run()
         a.destroy()
 
+def logout(self, *args):
+    cmd = "dbus-send --session --type=method_call --dest=org.gnome.SessionManager /org/gnome/SessionManager org.gnome.SessionManager.Logout uint32:1"
+    system(cmd)
+
 if __name__ == '__main__':
+    auth_screen = Auth_Screen()
     shut = Shut()
