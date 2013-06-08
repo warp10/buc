@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# coding=UTF-8
 
 # BUC Customizer
 #
@@ -40,9 +41,14 @@ class Auth_Screen():
         self.main_box.set_valign(Gtk.Align.CENTER)
         self.auth_screen.add(self.main_box)
 
-        self.label = Gtk.Label()
-	self.label.set_markup("<span font_desc=\"20.0\">Chiedere all'operatore di abilitare la sessione per continuare.</span>");
-        self.main_box.pack_start(self.label, False, False, 0)
+	self.label1 = Gtk.Label()
+	self.label1.set_markup("<span font_desc=\"15.0\"><b>Attenzione: questa è una sessione ospite: tutti i dati saranno eliminati.</b></span>\n\nSe intendi preservare i tuoi documenti, assicurati di salvarli su una chiavetta.\nLa sessione sarà chiusa automaticamente tra 30 minuti.\nPuoi controllare il tempo rimanente a tua disposizione tramite l'icona nel pannello in alto a destra.");
+	self.label1.set_justify(Gtk.Justification.CENTER)
+	self.main_box.pack_start(self.label1, False, False, 0)
+
+        self.label2 = Gtk.Label()
+	self.label2.set_markup("<span font_desc=\"20.0\">Chiedere all'operatore di abilitare la sessione per continuare.</span>");
+        self.main_box.pack_start(self.label2, False, False, 0)
 
         self.entry_hbox = Gtk.HBox(expand="False", spacing=100)
         self.entry_hbox.set_halign(Gtk.Align.CENTER)
@@ -178,7 +184,7 @@ class Shut():
         a = Gtk.AboutDialog()
         a.set_program_name("Shut")
         a.set_comments("Tool to Authorize and Logout Users")
-        a.set_version("0.2")
+        a.set_version("2.0")
         a.set_copyright("Copyright (C) 2012-2013 Andrea Colangelo")
         a.set_license_type(Gtk.License.GPL_3_0)
         a.set_website("http://www.linuxfm.org")

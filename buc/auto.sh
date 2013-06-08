@@ -32,29 +32,29 @@ alias getstr='gettext'  # prevents that xgettext gets confused
 desktop=$(getstr --domain=xdg-user-dirs 'Desktop')
 
 # Add firefox launcher to desktop
-echo "[Desktop Entry]" > $HOME/$desktop/firefox.desktop 
-echo "Version=1.0" >> $HOME/$desktop/firefox.desktop
-echo "Type=Application" >> $HOME/$desktop/firefox.desktop
-echo "Terminal=false" >> $HOME/$desktop/firefox.desktop
-echo "Icon=firefox" >> $HOME/$desktop/firefox.desktop
-echo "Name=Mozilla Firefox" >> $HOME/$desktop/firefox.desktop
-echo "Exec=firefox" >> $HOME/$desktop/firefox.desktop
-chmod a+x $HOME/$desktop/firefox.desktop
+#echo "[Desktop Entry]" > $HOME/$desktop/firefox.desktop 
+#echo "Version=1.0" >> $HOME/$desktop/firefox.desktop
+#echo "Type=Application" >> $HOME/$desktop/firefox.desktop
+#echo "Terminal=false" >> $HOME/$desktop/firefox.desktop
+#echo "Icon=firefox" >> $HOME/$desktop/firefox.desktop
+#echo "Name=Mozilla Firefox" >> $HOME/$desktop/firefox.desktop
+#echo "Exec=firefox" >> $HOME/$desktop/firefox.desktop
+#chmod a+x $HOME/$desktop/firefox.desktop
 
 # make the info dialog window become on focus
-sleep 2
+#sleep 2
 
 # info dialog
-title=$(gettext 'Attenzione: sessione ospite')
-text=$(gettext "Questa è una sessione ospite. Tutti i dati saranno eliminati
-automaticamente dopo la chiusura della sessione. Se intendi preservare i tuoi
-documenti, assicurati di salvarli su una chiavetta.
+#title=$(gettext 'Attenzione: sessione ospite')
+#text=$(gettext "Questa è una sessione ospite. Tutti i dati saranno eliminati
+#automaticamente dopo la chiusura della sessione. Se intendi preservare i tuoi
+#documenti, assicurati di salvarli su una chiavetta.
 
-La sessione sarà chiusa automaticamente tra 30 minuti. Puoi monitorare il
-tempo rimanente a tua disposizione tramite l'icona nel pannello in alto a
-destra.")
-test -w /var/guest-data && text="$text"
-zenity --warning --height=200 --title="$title" --text="$text" &
+#La sessione sarà chiusa automaticamente tra 30 minuti. Puoi monitorare il
+#tempo rimanente a tua disposizione tramite l'icona nel pannello in alto a
+#destra.")
+#test -w /var/guest-data && text="$text"
+#zenity --warning --height=200 --title="$title" --text="$text" &
 
 # Automatic logout
 shut
