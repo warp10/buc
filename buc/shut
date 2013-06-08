@@ -28,10 +28,15 @@ from gi.repository import Notify
 from os import system
 from time import time, sleep
 import hashlib
+import gconf
 
 class Auth_Screen():
     def __init__(self):
+        self.client = gconf.client_get_default()
+        self.disable_alttab()
+
         self.auth_screen = Gtk.Window()
+        self.auth_screen.connect("delete-event", logout)
         self.auth_screen.set_title("Kill me if you can, n00b!")
         self.auth_screen.fullscreen()
         self.auth_screen.set_keep_above(True)
@@ -74,14 +79,22 @@ class Auth_Screen():
         self.auth_screen.show_all()
         Gtk.main()
 
+    def disable_alttab(self):
+        self.client.set_string("/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_forward", '')
+
+    def enable_alttab(self):
+        self.client.set_string("/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_forward", '<Alt>Tab')
+
     def auth(self, *args):
         hash = hashlib.sha256()
         hash.update(self.entry.get_text())
         if hash.hexdigest() == 'b1a8ba0d470fcfd0326964bc1ed4e80753d55e2db296a01dcab4b9fc8cc52b68':
+            self.enable_alttab()
             self.auth_screen.destroy()
             Gtk.main_quit()
         else:
             self.entry.set_text("")
+
 
 class Shut():
     def __init__(self):
