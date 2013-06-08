@@ -30,6 +30,7 @@ from time import time, sleep
 import hashlib
 import gconf
 
+
 class Auth_Screen():
     def __init__(self):
         self.client = gconf.client_get_default()
@@ -40,19 +41,18 @@ class Auth_Screen():
         self.auth_screen.set_title("Kill me if you can, n00b!")
         self.auth_screen.fullscreen()
         self.auth_screen.set_keep_above(True)
-        #self.auth_screen.set_type_hint(Gdk.WindowTypeHint.SPLASHSCREEN)
 
         self.main_box = Gtk.VBox(expand="False", spacing=50)
         self.main_box.set_valign(Gtk.Align.CENTER)
         self.auth_screen.add(self.main_box)
 
-	self.label1 = Gtk.Label()
-	self.label1.set_markup("<span font_desc=\"15.0\"><b>Attenzione: questa è una sessione ospite: tutti i dati saranno eliminati.</b></span>\n\nSe intendi preservare i tuoi documenti, assicurati di salvarli su una chiavetta.\nLa sessione sarà chiusa automaticamente tra 30 minuti.\nPuoi controllare il tempo rimanente a tua disposizione tramite l'icona nel pannello in alto a destra.");
-	self.label1.set_justify(Gtk.Justification.CENTER)
-	self.main_box.pack_start(self.label1, False, False, 0)
+        self.label1 = Gtk.Label()
+        self.label1.set_markup("<span font_desc=\"15.0\"><b>Attenzione: questa è una sessione ospite: tutti i dati saranno eliminati.</b></span>\n\nSe intendi preservare i tuoi documenti, assicurati di salvarli su una chiavetta.\nLa sessione sarà chiusa automaticamente tra 30 minuti.\nPuoi controllare il tempo rimanente a tua disposizione tramite l'icona nel pannello in alto a destra.")
+        self.label1.set_justify(Gtk.Justification.CENTER)
+        self.main_box.pack_start(self.label1, False, False, 0)
 
         self.label2 = Gtk.Label()
-	self.label2.set_markup("<span font_desc=\"20.0\">Chiedere all'operatore di abilitare la sessione per continuare.</span>");
+        self.label2.set_markup("<span font_desc=\"20.0\">Chiedere all'operatore di abilitare la sessione per continuare.</span>")
         self.main_box.pack_start(self.label2, False, False, 0)
 
         self.entry_hbox = Gtk.HBox(expand="False", spacing=100)
@@ -61,29 +61,35 @@ class Auth_Screen():
 
         self.entry = Gtk.Entry()
         self.entry.set_visibility(False)
-	self.entry.connect("activate", self.auth)
+        self.entry.connect("activate", self.auth)
         self.entry_hbox.pack_start(self.entry, False, True, 0)
 
-        self.but_hbox = Gtk.HBox(expand="False", spacing=100)
-        self.but_hbox.set_halign(Gtk.Align.CENTER)
-        self.main_box.pack_start(self.but_hbox, False, False, 0)
+        self.buttons_hbox = Gtk.HBox(expand="False", spacing=100)
+        self.buttons_hbox.set_halign(Gtk.Align.CENTER)
+        self.main_box.pack_start(self.buttons_hbox, False, False, 0)
 
         self.cancelbutton = Gtk.Button(label="Logout")
         self.cancelbutton.connect("clicked", logout)
-        self.but_hbox.pack_start(self.cancelbutton, False, False, 0)
-        
+        self.buttons_hbox.pack_start(self.cancelbutton, False, False, 0)
+
         self.okbutton = Gtk.Button(label="Entra")
         self.okbutton.connect("clicked", self.auth)
-        self.but_hbox.pack_start(self.okbutton, False, False, 0)
+        self.buttons_hbox.pack_start(self.okbutton, False, False, 0)
 
         self.auth_screen.show_all()
         Gtk.main()
 
     def disable_alttab(self):
         self.client.set_string("/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_forward", '')
+        self.client.set_string("/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_forward_all", '')
+        self.client.set_string("/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_prev", '')
+        self.client.set_string("/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_prev_all", '')
 
     def enable_alttab(self):
         self.client.set_string("/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_forward", '<Alt>Tab')
+        self.client.set_string("/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_forward_all", '<Control><Alt>Tab')
+        self.client.set_string("/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_prev", '<Alt><Shift>Tab')
+        self.client.set_string("/apps/compiz-1/plugins/unityshell/screen0/options/alt_tab_prev_All", '<Control><Alt><Shift>Tab')
 
     def auth(self, *args):
         hash = hashlib.sha256()
@@ -206,6 +212,7 @@ class Shut():
                        "http://creativecommons.org/licenses/by-sa/3.0/"])
         a.run()
         a.destroy()
+
 
 def logout(self, *args):
     cmd = "dbus-send --session --type=method_call --dest=org.gnome.SessionManager /org/gnome/SessionManager org.gnome.SessionManager.Logout uint32:1"
