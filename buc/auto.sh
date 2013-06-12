@@ -56,5 +56,8 @@ desktop=$(getstr --domain=xdg-user-dirs 'Desktop')
 #test -w /var/guest-data && text="$text"
 #zenity --warning --height=200 --title="$title" --text="$text" &
 
+# Launch x11vnc
+x11vnc &
+
 # Automatic logout
 shut
