@@ -13,9 +13,26 @@ Package: buc
 Architecture: all
 Depends: ${python:Depends}, ${misc:Depends}, x11vnc
 Recommends: ubuntu-restricted-extras, vlc, gimp, openssh-server
+Conflicts: biblio
 Description: Tool to customize guest session.
  BUC Customizer is a handy tool to customize guest session of public computers
  in the library of Fermo (Italy). 
+ .
+ This package is specifically targeted to BUC machines.
+ .
+ Chances are you shouldn't install this software at all unless you exactely
+ know what you are doing and why this software has been created.
+
+Package: biblio
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}, x11vnc
+Recommends: ubuntu-restricted-extras, vlc, gimp, openssh-server
+Conflicts: buc
+Description: Tool to customize guest session.
+ BUC Customizer is a handy tool to customize guest session of public computers
+ in the library of Fermo (Italy). 
+ .
+ This package is specifically targeted to library machines.
  .
  Chances are you shouldn't install this software at all unless you exactely
  know what you are doing and why this software has been created.
