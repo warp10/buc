@@ -1,3 +1,15 @@
+buc (3.0ubuntu0~ppa0) UNRELEASED; urgency=low
+
+  * debian/control:
+    + add biblio binary package;
+    + buc binary stanza modified accordingly.
+  * debian/*.install: update accordingly.
+  * debian/biblio.manpages: add accordingly.
+  * {un,}install.sh: drop, useless.
+  * auto.sh*: split auto.sh in auto.sh.buc and auto.sh.biblio.
+
+ -- Andrea Colangelo <warp10@ubuntu.com>  Wed, 12 Jun 2013 17:53:37 +0200
+
 buc (2.1ubuntu0~ppa1) precise; urgency=low
 
   * auto.sh: start x11vnc
