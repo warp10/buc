@@ -11,7 +11,8 @@ Vcs-Browser: http://bazaar.launchpad.net/~warp10/+junk/buc/files
 
 Package: buc
 Architecture: all
-Depends: ${python:Depends}, ${misc:Depends}
+Depends: ${python:Depends}, ${misc:Depends}, x11vnc
+Recommends: ubuntu-restricted-extras, vlc, gimp, openssh-server
 Description: Tool to customize guest session.
  BUC Customizer is a handy tool to customize guest session of public computers
  in the library of Fermo (Italy). 
