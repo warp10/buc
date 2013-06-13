@@ -7,6 +7,7 @@ buc (3.0ubuntu0~ppa0) UNRELEASED; urgency=low
   * debian/biblio.manpages: add accordingly.
   * {un,}install.sh: drop, useless.
   * auto.sh*: split auto.sh in auto.sh.buc and auto.sh.biblio.
+  * debian/rules: override dh_install to properly mangle auto.sh*.
 
  -- Andrea Colangelo <warp10@ubuntu.com>  Wed, 12 Jun 2013 17:53:37 +0200
 
