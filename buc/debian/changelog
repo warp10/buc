@@ -1,4 +1,4 @@
-buc (3.0ubuntu0~ppa1) UNRELEASED; urgency=low
+buc (3.0ubuntu0~ppa1) precise; urgency=low
 
   * debian/control:
     + change Vcs-*, code is now hosted on github (see you, bzr!)
@@ -9,7 +9,6 @@ buc (3.0ubuntu0~ppa1) UNRELEASED; urgency=low
   * {un,}install.sh: drop, useless.
   * auto.sh*: split auto.sh in auto.sh.buc and auto.sh.biblio.
   * debian/rules: override dh_install to properly mangle auto.sh*.
-  * 
 
  -- Andrea Colangelo <warp10@ubuntu.com>  Thu, 13 Jun 2013 18:30:47 +0200
 
