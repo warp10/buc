@@ -1,5 +1,5 @@
 #!/bin/sh
-# postinst script for buc
+# postinst script for biblio
 #
 # see: dh_installdeb(1)
 

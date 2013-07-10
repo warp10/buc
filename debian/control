@@ -25,7 +25,7 @@ Description: Tool to customize guest session (buc version)
 
 Package: biblio
 Architecture: all
-Depends: ${python:Depends}, ${misc:Depends}, x11vnc
+Depends: ${python:Depends}, ${misc:Depends}
 Recommends: ubuntu-restricted-extras, vlc, gimp, openssh-server
 Conflicts: buc
 Description: Tool to customize guest session (library  version)
