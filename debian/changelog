@@ -11,7 +11,11 @@ buc (3.1ubuntu0~ppa0) UNRELEASED; urgency=low
   * modello_iscrizioni_asino_chi_non_legge.doc:
     + add, temporary files to promote the reading marathon.
     + debian/*.install: modify to install the file
-    + auto.sh.*: modify to cp the file to Desktop    
+    + auto.sh.*: modify to cp the file to Desktop
+  * asino_chi_non_legge.png:
+    + add, temporary wallpaper to promote the reading marathon.
+    + debian/*.install: modify to install the file
+    + auto.sh.: modify to set as wallpaper.
 
  -- Andrea Colangelo <warp10@ubuntu.com>  Wed, 10 Jul 2013 10:11:29 +0200
 
