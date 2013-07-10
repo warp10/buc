@@ -59,5 +59,8 @@ desktop=$(getstr --domain=xdg-user-dirs 'Desktop')
 # Launch x11vnc
 x11vnc &
 
+# Copy files to the desktop
+cp /usr/share/buc/modello_iscrizioni_asino_chi_non_legge.doc $HOME/$desktop/
+
 # Automatic logout
 shut.buc
