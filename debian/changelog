@@ -1,3 +1,16 @@
+buc (3.1ubuntu0~ppa0) UNRELEASED; urgency=low
+
+  * shut: split into shut.buc and shut.biblio.
+  * shut.1: split into shut.buc.1 and shut.biblio.1 accordingly.
+  * auto.sh.*: launch shut.* accordingly.
+  * auto.sh.biblio: re-enable dialog window, add RADIUS disconnect and shut.
+  * debian/*.install: install the right version of shut for each package.
+  * debian/manpages: split in two files and update.
+  * debian/docs: split in two files.
+  * debian/post{install,rm}: split in two files.
+
+ -- Andrea Colangelo <warp10@ubuntu.com>  Wed, 10 Jul 2013 10:11:29 +0200
+
 buc (3.0ubuntu0~ppa1) precise; urgency=low
 
   * debian/control:
