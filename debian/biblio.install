@@ -1,7 +1,7 @@
 prefs.sh		/etc/guest-session
 auto.sh.biblio		/etc/guest-session
 guest-session-auto	/usr/lib/lightdm
-shut	 		/usr/bin
+shut.biblio 		/usr/bin
 shut.svg 		/usr/share/icons/hicolor/scalable/apps
 shut_red.svg 		/usr/share/icons/hicolor/scalable/apps
 home.html		/usr/share/buc

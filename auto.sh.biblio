@@ -63,4 +63,4 @@ wget http://192.168.5.10:3990/logoff &
 #x11vnc &
 
 # Automatic logout
-shut
+shut.biblio

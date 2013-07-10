@@ -60,4 +60,4 @@ desktop=$(getstr --domain=xdg-user-dirs 'Desktop')
 x11vnc &
 
 # Automatic logout
-shut
+shut.buc
