@@ -42,22 +42,25 @@ desktop=$(getstr --domain=xdg-user-dirs 'Desktop')
 #chmod a+x $HOME/$desktop/firefox.desktop
 
 # make the info dialog window become on focus
-#sleep 2
+sleep 2
 
 # info dialog
-#title=$(gettext 'Attenzione: sessione ospite')
-#text=$(gettext "Questa è una sessione ospite. Tutti i dati saranno eliminati
-#automaticamente dopo la chiusura della sessione. Se intendi preservare i tuoi
-#documenti, assicurati di salvarli su una chiavetta.
+title=$(gettext 'Attenzione: sessione ospite')
+text=$(gettext "Questa è una sessione ospite. Tutti i dati saranno eliminati
+automaticamente dopo la chiusura della sessione. Se intendi preservare i tuoi
+documenti, assicurati di salvarli su una chiavetta.
 
-#La sessione sarà chiusa automaticamente tra 30 minuti. Puoi monitorare il
-#tempo rimanente a tua disposizione tramite l'icona nel pannello in alto a
-#destra.")
-#test -w /var/guest-data && text="$text"
-#zenity --warning --height=200 --title="$title" --text="$text" &
+La sessione sarà chiusa automaticamente tra 30 minuti. Puoi monitorare il
+tempo rimanente a tua disposizione tramite l'icona nel pannello in alto a
+destra.")
+test -w /var/guest-data && text="$text"
+zenity --warning --height=200 --title="$title" --text="$text" &
+
+# Force disconnect RADIUS
+wget http://192.168.5.10:3990/logoff &
 
 # Launch x11vnc
 #x11vnc &
 
 # Automatic logout
-#shut
+shut
