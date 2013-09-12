@@ -1,4 +1,4 @@
-buc (4ubuntu0) UNRELEASED; urgency=low
+buc (4ubuntu0) precise; urgency=low
 
   * Removal of "Asino chi non legge" stuff:
     + asino_chi_non_legge.png: drop.

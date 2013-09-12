@@ -39,7 +39,7 @@ Package: buc-common
 Architecture: all
 Depends: ${misc:Depends}
 Recommends: ubuntu-restricted-extras, vlc, gimp, openssh-server
-Description: Tool to customize guest session (common-files)
+Description: Tool to customize guest session (common files)
  BUC Customizer is a handy tool to customize guest session of public computers
  in the library of Fermo (Italy).
  .
