@@ -63,11 +63,11 @@ wget http://192.168.5.10:3990/logoff &
 #x11vnc &
 
 # Copy files to desktop
-cp /usr/share/buc/modello_iscrizioni_asino_chi_non_legge.doc $HOME/$desktop
+# cp /usr/share/buc/modello_iscrizioni_asino_chi_non_legge.doc $HOME/$desktop
 
 # Set reading marathon wallpaper
-gsettings set org.gnome.desktop.background picture-uri file:////usr/share/buc/asino_chi_non_legge.png
-gsettings set org.gnome.desktop.background picture-options 'stretched'
+# gsettings set org.gnome.desktop.background picture-uri file:////usr/share/buc/asino_chi_non_legge.png
+# gsettings set org.gnome.desktop.background picture-options 'stretched'
 
 # Automatic logout
 shut.biblio

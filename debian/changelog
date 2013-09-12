@@ -1,3 +1,11 @@
+buc (3.2ubuntu0) UNRELEASED; urgency=low
+
+  * asino_chi_non_legge.png: remove, not used anymore.
+  * modello_iscrizioni_asino_chi_non_legge.doc: remove, not used anymore.
+  * auto.sh.*: update accordingly.
+
+ -- Andrea Colangelo <warp10@ubuntu.com>  Thu, 12 Sep 2013 12:09:12 +0200
+
 buc (3.1ubuntu0~ppa1) precise; urgency=low
 
   * shut: split into shut.buc and shut.biblio.
