@@ -160,6 +160,7 @@ class Shut():
         if self.label == "-1":
             return False
         self.ind.set_label(self.label, "30")
+	return True
 
     def show_notice_30(self):
         notice = "Questa sessione sara' terminata automaticamente tra 30 minuti."
