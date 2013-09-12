@@ -1,21 +1,18 @@
 buc (4ubuntu0) UNRELEASED; urgency=low
 
-  * debian/control: add buc-common stanza.
-
- -- Andrea Colangelo <warp10@ubuntu.com>  Thu, 12 Sep 2013 16:48:51 +0200
-
-buc (3.2ubuntu0) UNRELEASED; urgency=low
-
   * Removal of "Asino chi non legge" stuff:
     + asino_chi_non_legge.png: drop.
     + modello_iscrizioni_asino_chi_non_legge.doc: drop.
     + auto.sh.*: update accordingly.
     + debian/*.install: update accordingly
   * shut.*: fix timeout not properly working.
-  * Move auto.sh to /usr/share/buc:
+  * Install auto.sh in /usr/share/buc:
     + debian/*.install: update accordingly.
     + debian/rules: update accordingly.
     + guest-session-auto: update accordingly.
+  * Add new package buc-common containing shared files:
+    + debian/control: add buc-common stanza and modified others accordingly.
+    + debian/*.install: install common files in buc-common.
 
  -- Andrea Colangelo <warp10@ubuntu.com>  Thu, 12 Sep 2013 12:09:12 +0200
 

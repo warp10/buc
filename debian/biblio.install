@@ -1,8 +1,2 @@
-prefs.sh		/etc/guest-session
 auto.sh.biblio		/usr/share/buc
-guest-session-auto	/usr/lib/lightdm
 shut.biblio 		/usr/bin
-shut.svg 		/usr/share/icons/hicolor/scalable/apps
-shut_red.svg 		/usr/share/icons/hicolor/scalable/apps
-home.html		/usr/share/buc
-images/*		/usr/share/buc/images
