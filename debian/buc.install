@@ -1,5 +1,5 @@
 prefs.sh		/etc/guest-session
-auto.sh.buc		/etc/guest-session
+auto.sh.buc		/usr/share/buc
 guest-session-auto	/usr/lib/lightdm
 shut.buc 		/usr/bin
 shut.svg 		/usr/share/icons/hicolor/scalable/apps
