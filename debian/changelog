@@ -1,3 +1,9 @@
+buc (4ubuntu0) UNRELEASED; urgency=low
+
+  * debian/control: add buc-common stanza.
+
+ -- Andrea Colangelo <warp10@ubuntu.com>  Thu, 12 Sep 2013 16:48:51 +0200
+
 buc (3.2ubuntu0) UNRELEASED; urgency=low
 
   * Removal of "Asino chi non legge" stuff:

@@ -11,12 +11,11 @@ Vcs-Browser: https://github.com/warp10/buc.git
 
 Package: buc
 Architecture: all
-Depends: ${python:Depends}, ${misc:Depends}, x11vnc
-Recommends: ubuntu-restricted-extras, vlc, gimp, openssh-server
+Depends: ${python:Depends}, ${misc:Depends}, buc-common, x11vnc
 Conflicts: biblio
 Description: Tool to customize guest session (buc version)
  BUC Customizer is a handy tool to customize guest session of public computers
- in the library of Fermo (Italy). 
+ in the library of Fermo (Italy).
  .
  This package is specifically targeted to BUC machines.
  .
@@ -25,14 +24,26 @@ Description: Tool to customize guest session (buc version)
 
 Package: biblio
 Architecture: all
-Depends: ${python:Depends}, ${misc:Depends}
-Recommends: ubuntu-restricted-extras, vlc, gimp, openssh-server
+Depends: ${python:Depends}, ${misc:Depends}, buc-common
 Conflicts: buc
 Description: Tool to customize guest session (library  version)
  BUC Customizer is a handy tool to customize guest session of public computers
- in the library of Fermo (Italy). 
+ in the library of Fermo (Italy).
  .
  This package is specifically targeted to library machines.
+ .
+ Chances are you shouldn't install this software at all unless you exactely
+ know what you are doing and why this software has been created.
+
+Package: buc-common
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: ubuntu-restricted-extras, vlc, gimp, openssh-server
+Description: Tool to customize guest session (library  version)
+ BUC Customizer is a handy tool to customize guest session of public computers
+ in the library of Fermo (Italy).
+ .
+ This package contains some common files needed by both buc and biblio.
  .
  Chances are you shouldn't install this software at all unless you exactely
  know what you are doing and why this software has been created.
