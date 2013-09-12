@@ -26,7 +26,7 @@ Package: biblio
 Architecture: all
 Depends: ${python:Depends}, ${misc:Depends}, buc-common
 Conflicts: buc
-Description: Tool to customize guest session (library  version)
+Description: Tool to customize guest session (library version)
  BUC Customizer is a handy tool to customize guest session of public computers
  in the library of Fermo (Italy).
  .
@@ -39,7 +39,7 @@ Package: buc-common
 Architecture: all
 Depends: ${misc:Depends}
 Recommends: ubuntu-restricted-extras, vlc, gimp, openssh-server
-Description: Tool to customize guest session (library  version)
+Description: Tool to customize guest session (common-files)
  BUC Customizer is a handy tool to customize guest session of public computers
  in the library of Fermo (Italy).
  .

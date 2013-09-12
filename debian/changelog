@@ -13,6 +13,7 @@ buc (4ubuntu0) UNRELEASED; urgency=low
   * Add new package buc-common containing shared files:
     + debian/control: add buc-common stanza and modified others accordingly.
     + debian/*.install: install common files in buc-common.
+    + debian/*.post{inst,rm}: moved to buc-common.
 
  -- Andrea Colangelo <warp10@ubuntu.com>  Thu, 12 Sep 2013 12:09:12 +0200
 

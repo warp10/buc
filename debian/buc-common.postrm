@@ -1,5 +1,5 @@
 #!/bin/sh
-# postrm script for buc
+# postrm script for buc-common
 #
 # see: dh_installdeb(1)
 
