@@ -1,8 +1,10 @@
 buc (3.2ubuntu0) UNRELEASED; urgency=low
 
-  * asino_chi_non_legge.png: remove, not used anymore.
-  * modello_iscrizioni_asino_chi_non_legge.doc: remove, not used anymore.
-  * auto.sh.*: update accordingly.
+  * Removal of "Asino chi non legge" stuff:
+    + asino_chi_non_legge.png: drop.
+    + modello_iscrizioni_asino_chi_non_legge.doc: drop.
+    + auto.sh.*: update accordingly.
+    + debian/*.install: update accordingly
   * shut.*: fix timeout not properly working.
 
  -- Andrea Colangelo <warp10@ubuntu.com>  Thu, 12 Sep 2013 12:09:12 +0200
