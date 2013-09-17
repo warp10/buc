@@ -215,7 +215,7 @@ class Shut():
         a.destroy()
 
 
-def logout(self, *args):
+def logout(*args):
     cmd = "dbus-send --session --type=method_call --dest=org.gnome.SessionManager /org/gnome/SessionManager org.gnome.SessionManager.Logout uint32:1"
     system(cmd)
 

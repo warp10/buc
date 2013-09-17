@@ -1,3 +1,9 @@
+buc (4.1ubuntu0) precise; urgency=low
+
+  * shut.*: fix a f***ing bug that avoids logout() being called.
+
+ -- Andrea Colangelo <warp10@ubuntu.com>  Tue, 17 Sep 2013 22:23:10 +0200
+
 buc (4ubuntu0) precise; urgency=low
 
   * Removal of "Asino chi non legge" stuff:
