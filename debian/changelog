@@ -1,3 +1,9 @@
+buc (4.2ubuntu0) precise; urgency=medium
+
+  * shut.buc: password hash update.
+
+ -- Andrea Colangelo <warp10@debian.org>  Thu, 09 Apr 2015 19:11:23 +0200
+
 buc (4.1ubuntu0) precise; urgency=low
 
   * shut.*: fix a f***ing bug that avoids logout() being called.
