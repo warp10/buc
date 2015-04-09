@@ -94,7 +94,7 @@ class Auth_Screen():
     def auth(self, *args):
         hash = hashlib.sha256()
         hash.update(self.entry.get_text())
-        if hash.hexdigest() == '1d558807fc5c0f6625e3e17a2372660b06df5f172f48f5beb4970bf995ca5f8c':
+        if hash.hexdigest() == '759072f30eb79beef6b69213e485a8d2ec0477ab2f4845a09356de8f9c9ff948':
             self.enable_alttab()
             self.auth_screen.destroy()
             Gtk.main_quit()
