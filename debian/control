@@ -4,7 +4,7 @@ Priority: extra
 Maintainer: Andrea Colangelo <warp10@ubuntu.com>
 Build-Depends: debhelper (>= 9.0.0), python (>= 2.6)
 X-Python-Version: >= 2.6
-Standards-Version: 3.9.4
+Standards-Version: 3.9.6
 Homepage: http://www.linuxfm.org
 Vcs-Git: git://github.com/warp10/buc.git
 Vcs-Browser: https://github.com/warp10/buc.git

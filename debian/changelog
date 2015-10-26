@@ -3,7 +3,9 @@ buc (5ubuntu6) UNRELEASED; urgency=medium
   * *.grotta: add to handle computers in Grottaxzolina's library. 
   * debian/buc-common.post*: add support for xfce4-terminal.
   * shut.grotta.1: Add.
-  * debian/control: add a binary stanza for grotta.
+  * debian/control:
+    + add a binary stanza for grotta.
+    + bump Standards-Version, no changes required.
   * debian/grotta.install: add accordingly. 
   * debian/grotta.manpages: add accordingly. 
   * debian/rules: updated to install the new binary package.
