@@ -58,5 +58,11 @@ destra.")
 test -w /var/guest-data && text="$text"
 zenity --warning --height=200 --title="$title" --text="$text" &
 
+# Copy config data to user's folder
+if [ -d /usr/share/buc/config ]
+	then
+		cp -r /usr/share/buc/config/* ~/.config
+fi
+
 # Automatic logout
 shut.grotta
