@@ -1,9 +1,10 @@
-buc (5ubuntu0) UNRELEASED; urgency=medium
+buc (5ubuntu1) UNRELEASED; urgency=medium
 
   * *.grotta: add to handle computers in Grottazolina's library. 
   * debian/buc-common.post*: add support for xfce4-terminal.
+  * shut.grotta.1: Add 
 
- -- Andrea Colangelo <warp10@debian.org>  Mon, 26 Oct 2015 10:03:40 +0100
+ -- Andrea Colangelo <warp10@debian.org>  Mon, 26 Oct 2015 10:38:27 +0100
 
 buc (4.2ubuntu0) precise; urgency=medium
 
