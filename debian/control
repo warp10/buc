@@ -12,7 +12,7 @@ Vcs-Browser: https://github.com/warp10/buc.git
 Package: buc
 Architecture: all
 Depends: ${python:Depends}, ${misc:Depends}, buc-common, x11vnc
-Conflicts: biblio
+Breaks: biblio, grotta
 Description: Tool to customize guest session (buc version)
  BUC Customizer is a handy tool to customize guest session of public computers
  in the library of Fermo (Italy).
@@ -25,7 +25,7 @@ Description: Tool to customize guest session (buc version)
 Package: biblio
 Architecture: all
 Depends: ${python:Depends}, ${misc:Depends}, buc-common
-Conflicts: buc
+Breaks: buc, grotta
 Description: Tool to customize guest session (library version)
  BUC Customizer is a handy tool to customize guest session of public computers
  in the library of Fermo (Italy).
@@ -38,7 +38,7 @@ Description: Tool to customize guest session (library version)
 Package: grotta
 Architecture: all
 Depends: ${python:Depends}, ${misc:Depends}, buc-common
-Conflicts: buc
+Breaks: buc, biblio
 Description: Tool to customize guest session (library version)
  BUC Customizer is a handy tool to customize guest session of public computers
  in the library of Fermo (Italy).

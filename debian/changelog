@@ -5,6 +5,7 @@ buc (5ubuntu0) UNRELEASED; urgency=medium
   * shut.grotta.1: Add.
   * debian/control:
     + add a binary stanza for grotta.
+    + properly declare Breaks among the three binary packages
     + bump Standards-Version, no changes required.
   * debian/grotta.install: add accordingly. 
   * debian/grotta.manpages: add accordingly. 
