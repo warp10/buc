@@ -21,7 +21,22 @@ set -e
 
 case "$1" in
     purge|remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
-        chmod o+x /usr/bin/gnome-terminal /usr/bin/xterm /usr/bin/uxterm
+	if [ -f /usr/bin/gnome-terminal ]
+  		then
+			chmod o+x /usr/bin/gnome-terminal
+	fi
+	if [ -f /usr/bin/xfce4-terminal ]
+  		then
+			chmod o+x /usr/bin/xfce4-terminal
+	fi
+	if [ -f /usr/bin/xterm ]
+  		then
+			chmod o+x /usr/bin/xterm
+	fi
+	if [ -f /usr/bin/xterm ]
+  		then
+			chmod o+x /usr/bin/uxterm
+	fi
     ;;
 
     *)
