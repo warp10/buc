@@ -216,7 +216,7 @@ class Shut():
 
 
 def logout(*args):
-    cmd = "dbus-send --session --type=method_call --dest=org.gnome.SessionManager /org/gnome/SessionManager org.gnome.SessionManager.Logout uint32:1"
+    cmd = "xfce4-session-logout --logout"
     system(cmd)
 
 if __name__ == '__main__':
