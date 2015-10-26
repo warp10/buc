@@ -9,3 +9,4 @@ override_dh_install:
 	dh_install
 	mv $(CURDIR)/debian/biblio/usr/share/buc/auto.sh.biblio $(CURDIR)/debian/biblio/usr/share/buc/auto.sh
 	mv $(CURDIR)/debian/buc/usr/share/buc/auto.sh.buc $(CURDIR)/debian/buc/usr/share/buc/auto.sh
+	mv $(CURDIR)/debian/grotta/usr/share/buc/auto.sh.grotta $(CURDIR)/debian/grotta/usr/share/buc/auto.sh

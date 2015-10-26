@@ -1,10 +1,15 @@
-buc (5ubuntu1) UNRELEASED; urgency=medium
+buc (5ubuntu6) UNRELEASED; urgency=medium
 
-  * *.grotta: add to handle computers in Grottazolina's library. 
+  * *.grotta: add to handle computers in Grottaxzolina's library. 
   * debian/buc-common.post*: add support for xfce4-terminal.
-  * shut.grotta.1: Add 
+  * shut.grotta.1: Add.
+  * debian/control: add a binary stanza for grotta.
+  * debian/grotta.install: add accordingly. 
+  * debian/grotta.manpages: add accordingly. 
+  * debian/rules: updated to install the new binary package.
+  * debian/copyright: updated 
 
- -- Andrea Colangelo <warp10@debian.org>  Mon, 26 Oct 2015 10:38:27 +0100
+ -- Andrea Colangelo <warp10@debian.org>  Mon, 26 Oct 2015 10:43:22 +0100
 
 buc (4.2ubuntu0) precise; urgency=medium
 

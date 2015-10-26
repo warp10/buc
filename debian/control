@@ -35,6 +35,19 @@ Description: Tool to customize guest session (library version)
  Chances are you shouldn't install this software at all unless you exactely
  know what you are doing and why this software has been created.
 
+Package: grotta
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}, buc-common
+Conflicts: buc
+Description: Tool to customize guest session (library version)
+ BUC Customizer is a handy tool to customize guest session of public computers
+ in the library of Fermo (Italy).
+ .
+ This package is specifically targeted to machines of Grottazzolina's library.
+ .
+ Chances are you shouldn't install this software at all unless you exactely
+ know what you are doing and why this software has been created.
+
 Package: buc-common
 Architecture: all
 Depends: ${misc:Depends}
